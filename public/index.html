@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Logo Generator</title>
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <h1>AI Logo Generator</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#templates">Templates</a>
+        <a href="#generate">Generate</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>Hey try this !</h2>
+      <p>Create stunning logos powered by AI. Customize templates, add your company name, and download your logo instantly!</p>
+    </div>
+  </section>
+
+  <!-- Logo Generator -->
+  <section id="generate" class="generator-section">
+    <div class="container">
+      <h2>Generate Your Logo</h2>
+      <input type="text" id="prompt" placeholder="Enter your logo idea..." />
+      <button id="generateBtn">Generate Logo</button>
+
+      <div id="result">
+        <img id="logo" src="" alt="Generated Logo" />
+        <a id="download" href="#" download="logo.png">Download Logo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Templates Section -->
+  <section id="templates" class="templates-section">
+    <div class="container">
+      <h2>Our Generated Logo </h2>
+      <div class="templates-grid">
+        <!-- Template example -->
+        <div class="template-card">
+          <img src="logo3.jpg" alt="logo-1">
+        </div>
+        <div class="template-card">
+          <img src="logo2.jpg" alt="logo-2">
+        </div>
+        <div class="template-card">
+          <img src="logo.png" alt="logo-3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>"Design is not just what it looks like and feels like. Design is how it works."</p>
+      <p>&copy; 2025 AI Logo Generator</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #00159c;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+header.scrolled {
+  background: #a9b1ba;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  width: 0;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+header nav a:hover {
+  color: #ffdd57;
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: hwb(55 60% 2%);
+  animation: fadeIn 1s ease forwards;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Generator Section */
+.generator-section {
+  padding: 80px 20px;
+  text-align: center;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.generator-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.generator-section input {
+  padding: 12px;
+  width: 60%;
+  max-width: 400px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.generator-section input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+.generator-section button {
+  padding: 12px 25px;
+  border: none;
+  background: #1820bb;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.generator-section button:hover {
+  background: #34236c;
+  transform: scale(1.05);
+}
+
+#logo {
+  max-width: 60%;
+  height: 150px;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  transform: scale(1.05);
+}
+
+#download {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: white;
+  background: #28a745;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#download:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* Templates Section */
+.templates-section {
+  padding: 80px 20px;
+  text-align: center;
+  animation: fadeIn 1.4s ease forwards;
+}
+
+.templates-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.templates-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.template-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.template-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.template-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.template-card img:hover {
+  transform: scale(1.05);
+}
+
+.template-card input.company-name {
+  margin-top: 10px;
+  width: 90%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.template-card input.company-name:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background: #000000;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  animation: fadeIn 1.6s ease forwards;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .generator-section input {
+    width: 90%;
+  }
+
+  .templates-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .template-card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header nav a {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+
+  .about-section h2, .generator-section h2, .templates-section h2 {
+    font-size: 1.8rem;
+  }
+}
