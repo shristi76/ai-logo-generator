@@ -15,7 +15,7 @@ app.use(express.static("public"));
  */
 async function generateImage(prompt) {
   const HF_API_URL =
-    "https://router.huggingface.co/fal-ai/fal-ai/hunyuan-image/v3/text-to-image";
+  "https://router.huggingface.co/fal-ai/fal-ai/hunyuan-image/v3/text-to-image";
 
   try {
     console.log("📡 Requesting image from Hugging Face...");
