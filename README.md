@@ -16,7 +16,7 @@ Just describe your brand or idea — the model generates a professional-looking 
 
 ## 🧩 **Tech Stack**
 
-* **Frontend:** HTML, CSS, JavaScript (or your preferred framework)
+* **Frontend:** HTML, CSS, JavaScript
 * **Backend/API:** Hugging Face Inference API
 * **Model:** Hugging Face Image Generation Model
 
